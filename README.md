@@ -1,10 +1,10 @@
-# Ansible Role: windows_update
+# Ansible Role: linux_update
 
-This role automates Windows security patching using Ansible.
+This role automates Linux patching using Ansible.
 
 ## Requirements
 
-- Windows hosts
+- Linux hosts
 - Ansible 2.10 or later
 
 ## Role Variables
@@ -18,12 +18,12 @@ None
 ## Example Playbook
 
 ```yaml
-- name: Apply Windows updates
-  hosts: windows_hosts
+- name: Apply Linux updates
+  hosts: linux_hosts
   become: yes
 
   roles:
-    - windows_update
+    - linux_update
 ```
 
 License: MIT
