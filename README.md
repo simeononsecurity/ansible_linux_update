@@ -15,6 +15,11 @@ None
 
 None
 
+## Installation
+```bash
+ansible-galaxy install simeononsecurity.linux_update
+```
+
 ## Example Playbook
 
 ```yaml
