@@ -16,9 +16,7 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
-    - name: Windows
-      versions:
-        - all
+
   author: SimeonOnSecurity
   license: MIT
   galaxy_tags: []
@@ -34,9 +32,6 @@ platforms:
     versions:
       - all
   - name: Alpine
-    versions:
-      - all
-  - name: Windows
     versions:
       - all
 
