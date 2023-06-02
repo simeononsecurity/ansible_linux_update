@@ -1,0 +1,20 @@
+---
+namespace: simeononsecurity
+name: "linux_update"
+description: "Role to automate Linux security patching."
+readme: README.md
+version: 1.0.0
+homepage: https://simeononsecurity.ch
+issues: https://github.com/simeononsecurity/ansible_linux_update/issues
+repository: https://github.com/simeononsecurity/ansible_linux_update
+authors:
+  - SimeonOnSecurity (https://simeononsecurity.ch)
+license_file: LICENSE
+tags:
+- role
+- linux
+build_ignore:
+- .github
+- .gitattributes
+- .gitignore
+- .vscode

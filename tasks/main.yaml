@@ -1,0 +1,93 @@
+---
+- name: Check for available Linux updates
+  block:
+    - name: Update package manager cache (apt)
+      apt:
+        update_cache: yes
+      when: ansible_pkg_mgr == "apt"
+
+    - name: Update package manager cache (dnf)
+      dnf:
+        refresh: yes
+      when: ansible_pkg_mgr == "dnf"
+
+    - name: Update package manager cache (yum)
+      yum:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: ansible_pkg_mgr == "yum"
+
+    - name: Update package manager cache (apk)
+      apk:
+        update_cache: yes
+      when: ansible_pkg_mgr == "apk"
+
+    - name: Check for available updates
+      package_facts:
+        manager: auto
+      register: package_facts
+
+  tags:
+    - linux_update
+
+- name: Install Linux updates if available
+  block:
+    - name: Install updates using package manager (apt)
+      package:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "apt"
+
+    - name: Install updates using apt
+      apt:
+        upgrade: safe
+        autoremove: yes
+        autoclean: yes
+      when: package_facts.ansible_facts.package_mgr == "apt"
+
+    - name: Install updates using package manager (dnf)
+      package:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "dnf"
+
+    - name: Install updates using dnf
+      dnf:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "dnf"
+
+    - name: Install updates using package manager (yum)
+      package:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "yum"
+
+    - name: Install updates using yum
+      yum:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "yum"
+
+    - name: Install updates using package manager (apk)
+      package:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "apk"
+
+    - name: Install updates using apk
+      apk:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: package_facts.ansible_facts.package_mgr == "apk"
+
+  tags:
+    - linux_update
