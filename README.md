@@ -31,9 +31,11 @@ ansible-galaxy install simeononsecurity.linux_update
     - linux_update
 ```
 
-License: MIT
+## License: MIT
 
-Author Information:
+## Author Information:
 This role was created by SimeonOnSecurity.
 For more information, visit [SimeonOnSecurity.ch](https://simeononsecurity.ch).
+
+## [Learn more about Automating Linux Patching with Ansible](https://simeononsecurity.ch/guides/automate-linux-patching-and-updates-with-ansible/)
 
