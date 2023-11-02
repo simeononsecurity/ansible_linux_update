@@ -3,7 +3,7 @@ namespace: simeononsecurity
 name: "linux_update"
 description: "Role to automate Linux security patching."
 readme: README.md
-version: 1.0.1
+version: 1.0.2
 homepage: https://simeononsecurity.com/guides/automate-linux-patching-and-updates-with-ansible/
 issues: https://github.com/simeononsecurity/ansible_linux_update/issues
 repository: https://github.com/simeononsecurity/ansible_linux_update
