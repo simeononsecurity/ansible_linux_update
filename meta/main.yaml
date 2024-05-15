@@ -3,38 +3,9 @@ galaxy_info:
   role_name: linux_update
   description: Role to automate Linux security patching.
   min_ansible_version: "2.10"
-  platforms:
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - all
-    - name: EL
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-
   author: SimeonOnSecurity
   license: MIT
   galaxy_tags: []
-
-platforms:
-  - name: Ubuntu
-    versions:
-      - all
-  - name: Debian
-    versions:
-      - all
-  - name: EL
-    versions:
-      - all
-  - name: Alpine
-    versions:
-      - all
-
 dependencies: []
 
 license: MIT
